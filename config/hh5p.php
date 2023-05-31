@@ -18,7 +18,7 @@ return array (
   'get_h5pcore_url' => 'h5p-core',
   'h5p_show_display_option' => false,
   'h5p_frame' => true,
-  'h5p_export' => false,
+  'h5p_export' => true,
   'h5p_embed' => false,
   'h5p_copyright' => false,
   'h5p_icon' => false,
@@ -26,14 +26,14 @@ return array (
   'h5p_ext_communication' => true,
   'h5p_save_content_state' => true,
   'h5p_save_content_frequency' => 30,
-  'h5p_site_key' => 
+  'h5p_site_key' =>
   array (
     'h5p_h5p_site_uuid' => false,
   ),
   'h5p_check_h5p_requirements' => false,
   'h5p_hub_is_enabled' => true,
   'h5p_version' => '1.23.0',
-  'guzzle' => 
+  'guzzle' =>
   array (
   ),
   'h5p_storage_path' => 'app/h5p',
