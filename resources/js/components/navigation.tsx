@@ -22,6 +22,15 @@ const LANGS = {
         config: "Konfiguracja",
         uploadNew: "Wgraj nowy",
     },
+    de: {
+        logout: "Abmelden",
+        login: "Anmelden",
+        contentList: "Content Liste",
+        createNewElement: "Neuen Content erstellen",
+        libraries: "Bibliotheken",
+        config: "Konfiguration",
+        uploadNew: "Importieren",
+    },
 };
 
 const getLangItem = (key: string) => {

@@ -1,7 +1,30 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Navigation = void 0;
-var react_1 = require("react");
+var react_1 = __importStar(require("react"));
 var react_router_dom_1 = require("react-router-dom");
 var services_1 = require("../services");
 var LANGS = {
@@ -22,6 +45,15 @@ var LANGS = {
         libraries: "Biblioteki",
         config: "Konfiguracja",
         uploadNew: "Wgraj nowy",
+    },
+    de: {
+        logout: "Abmelden",
+        login: "Anmelden",
+        contentList: "Content Liste",
+        createNewElement: "Neuen Content erstellen",
+        libraries: "Bibliotheken",
+        config: "Konfiguration",
+        uploadNew: "Importieren",
     },
 };
 var getLangItem = function (key) {
@@ -80,60 +112,31 @@ var Navigation = function () {
             window.removeEventListener("storageLocal", onStorage);
         };
     }, []);
-    return (<header className="pure-u-1-1">
-            <h1>{getLangItem("welcome")}</h1>
-
-            {loading && <p>loading...</p>}
-            {loggedIn ? (<nav className="pure-menu pure-menu-horizontal" style={{ display: "flex", justifyContent: "space-between" }}>
-                    <ul className="pure-menu-list">
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="index">
-                                {getLangItem("contentList")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="editor/new">
-                                {getLangItem("createNewElement")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="libraries">
-                                {getLangItem("libraries")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="config">
-                                {getLangItem("config")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="upload">
-                                {getLangItem("uploadNew")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                        <li className="pure-menu-item">
-                            <react_router_dom_1.NavLink style={navlinkStyle} className="pure-menu-link" to="/" onClick={logout}>
-                                {getLangItem("logout")}
-                            </react_router_dom_1.NavLink>
-                        </li>
-                    </ul>
-                    <form className="pure-form">
-                        <label>Lang: </label>
-
-                        <select value={lang} onChange={function (e) { return changeLang(e.target.value); }}>
-                            <option value="en">en</option>
-                            <option value="pl">pl</option>
-                        </select>
-                    </form>
-                </nav>) : (<nav className="pure-menu pure-menu-horizontal">
-                    <li className="pure-menu-item">
-                        <react_router_dom_1.NavLink className="pure-menu-link" style={navlinkStyle} to="login">
-                            {getLangItem("login")}
-                        </react_router_dom_1.NavLink>
-                    </li>
-                </nav>)}
-            <hr />
-        </header>);
+    return (react_1.default.createElement("header", { className: "pure-u-1-1" },
+        react_1.default.createElement("h1", null, getLangItem("welcome")),
+        loading && react_1.default.createElement("p", null, "loading..."),
+        loggedIn ? (react_1.default.createElement("nav", { className: "pure-menu pure-menu-horizontal", style: { display: "flex", justifyContent: "space-between" } },
+            react_1.default.createElement("ul", { className: "pure-menu-list" },
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "index" }, getLangItem("contentList"))),
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "editor/new" }, getLangItem("createNewElement"))),
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "libraries" }, getLangItem("libraries"))),
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "config" }, getLangItem("config"))),
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "upload" }, getLangItem("uploadNew"))),
+                react_1.default.createElement("li", { className: "pure-menu-item" },
+                    react_1.default.createElement(react_router_dom_1.NavLink, { style: navlinkStyle, className: "pure-menu-link", to: "/", onClick: logout }, getLangItem("logout")))),
+            react_1.default.createElement("form", { className: "pure-form" },
+                react_1.default.createElement("label", null, "Lang: "),
+                react_1.default.createElement("select", { value: lang, onChange: function (e) { return changeLang(e.target.value); } },
+                    react_1.default.createElement("option", { value: "en" }, "en"),
+                    react_1.default.createElement("option", { value: "pl" }, "pl"))))) : (react_1.default.createElement("nav", { className: "pure-menu pure-menu-horizontal" },
+            react_1.default.createElement("li", { className: "pure-menu-item" },
+                react_1.default.createElement(react_router_dom_1.NavLink, { className: "pure-menu-link", style: navlinkStyle, to: "login" }, getLangItem("login"))))),
+        react_1.default.createElement("hr", null)));
 };
 exports.Navigation = Navigation;
 exports.default = exports.Navigation;
