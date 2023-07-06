@@ -133,7 +133,8 @@ var Navigation = function () {
                 react_1.default.createElement("label", null, "Lang: "),
                 react_1.default.createElement("select", { value: lang, onChange: function (e) { return changeLang(e.target.value); } },
                     react_1.default.createElement("option", { value: "en" }, "en"),
-                    react_1.default.createElement("option", { value: "pl" }, "pl"))))) : (react_1.default.createElement("nav", { className: "pure-menu pure-menu-horizontal" },
+                    react_1.default.createElement("option", { value: "pl" }, "pl"),
+                    react_1.default.createElement("option", { value: "de" }, "de"))))) : (react_1.default.createElement("nav", { className: "pure-menu pure-menu-horizontal" },
             react_1.default.createElement("li", { className: "pure-menu-item" },
                 react_1.default.createElement(react_router_dom_1.NavLink, { className: "pure-menu-link", style: navlinkStyle, to: "login" }, getLangItem("login"))))),
         react_1.default.createElement("hr", null)));

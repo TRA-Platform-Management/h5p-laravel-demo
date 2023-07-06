@@ -171,6 +171,7 @@ export const Navigation = () => {
                         >
                             <option value="en">en</option>
                             <option value="pl">pl</option>
+                            <option value="de">de</option>
                         </select>
                     </form>
                 </nav>
