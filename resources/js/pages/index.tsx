@@ -7,6 +7,32 @@ import {
     deleteContent,
 } from "../services";
 
+const LANGS = {
+    de: {
+        actions: "Aktionen",
+        delete: "Löschen",
+        edit: "Bearbeiten",
+        library: "Bibliothek",
+        page: "Seite",
+        preview: "Vorschau",
+        title: "Titel",
+    },
+    en: {
+        actions: "Actions",
+        delete: "Delete",
+        edit: "Edit",
+        library: "Library",
+        page: "Page",
+        preview: "Preview",
+        title: "Title",
+    },
+};
+
+const getLangItem = (key: string) => {
+    const lang = localStorage.getItem("lang") || "en";
+    return LANGS[lang][key] || LANGS["en"][key];
+};
+
 export const page = () => {
     const [page, setPage] = useState<number>(1);
     const [data, setData] = useState<PaginatedMetaList<H5PContent>>();
@@ -48,9 +74,15 @@ export const page = () => {
                         <tr>
                             <th>#</th>
                             <th>uuid</th>
-                            <th>Title</th>
-                            <th>Library</th>
-                            <th>Actions</th>
+                            <th>
+                                {getLangItem("title")}
+                            </th>
+                            <th>
+                                {getLangItem("libraries")}
+                            </th>
+                            <th>
+                                {getLangItem("actions")}
+                            </th>
                         </tr>
                     </thead>
                     <tbody>

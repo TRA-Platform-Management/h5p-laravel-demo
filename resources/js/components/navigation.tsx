@@ -5,12 +5,12 @@ import { userMe } from "../services";
 
 const LANGS = {
     de: {
-        logout: "Abmelden",
-        login: "Anmelden",
+        config: "Konfiguration",
         contentList: "Content Liste",
         createNewElement: "Neuen Content erstellen",
         libraries: "Bibliotheken",
-        config: "Konfiguration",
+        login: "Anmelden",
+        logout: "Abmelden",
         uploadNew: "Importieren",
     },
     en: {
@@ -163,7 +163,7 @@ export const Navigation = () => {
                         </li>
                     </ul>
                     <form className="pure-form">
-                        <label>Lang: </label>
+                        <label></label>
 
                         <select
                             value={lang}
