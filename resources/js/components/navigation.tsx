@@ -4,6 +4,15 @@ import { Routes, Route, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { userMe } from "../services";
 
 const LANGS = {
+    de: {
+        logout: "Abmelden",
+        login: "Anmelden",
+        contentList: "Content Liste",
+        createNewElement: "Neuen Content erstellen",
+        libraries: "Bibliotheken",
+        config: "Konfiguration",
+        uploadNew: "Importieren",
+    },
     en: {
         logout: "Logout",
         welcome: "h5p-laravel Autorentool",
