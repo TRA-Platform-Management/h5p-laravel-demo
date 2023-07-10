@@ -102,19 +102,19 @@ export const page = () => {
                                         className="pure-button"
                                         to={`/editor/${h5p.id}`}
                                     >
-                                        edit
+                                        {getLangItem("edit")}
                                     </Link>{" "}
                                     <Link
                                         className="pure-button"
                                         to={`/player/${h5p.uuid}`}
                                     >
-                                        preview
+                                        {getLangItem("preview")}
                                     </Link>{" "}
                                     <button
                                         className="pure-button"
                                         onClick={() => onDelete(h5p.id)}
                                     >
-                                        delete
+                                        {getLangItem("delete")}
                                     </button>
                                 </td>
                             </tr>
@@ -124,7 +124,7 @@ export const page = () => {
                 <div>
                     <hr />
                     <form className="pure-form">
-                        <label>page:</label>
+                        <label>{getLangItem("page")}</label>
                         <select
                             onChange={(e) => setPage(Number(e.target.value))}
                         >
