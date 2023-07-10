@@ -10,46 +10,23 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.page = exports.UpdateEntry = void 0;
-var react_1 = __importStar(require("react"));
+var react_1 = require("react");
 var services_1 = require("../services");
 var UpdateEntry = function (_a) {
     var value = _a.value, onUpdate = _a.onUpdate, _b = _a.loading, loading = _b === void 0 ? false : _b;
     switch (typeof value.value) {
         case "string":
-            return (react_1.default.createElement("input", { disabled: loading, type: "text", value: value.value, onChange: function (e) { return onUpdate(e.target.value); } }));
+            return (<input disabled={loading} type="text" value={value.value} onChange={function (e) { return onUpdate(e.target.value); }}/>);
         case "number":
-            return (react_1.default.createElement("input", { disabled: loading, type: "number", value: value.value, onChange: function (e) { return onUpdate(Number(e.target.value)); } }));
+            return (<input disabled={loading} type="number" value={value.value} onChange={function (e) { return onUpdate(Number(e.target.value)); }}/>);
         case "boolean":
-            return (react_1.default.createElement("input", { disabled: loading, type: "checkbox", checked: value.value, onChange: function (e) { return onUpdate(e.target.checked); } }));
+            return (<input disabled={loading} type="checkbox" checked={value.value} onChange={function (e) { return onUpdate(e.target.checked); }}/>);
         default:
-            return react_1.default.createElement(react_1.default.Fragment, null);
+            return <react_1.default.Fragment />;
     }
-    return react_1.default.createElement(react_1.default.Fragment, null);
+    return <react_1.default.Fragment />;
 };
 exports.UpdateEntry = UpdateEntry;
 var page = function () {
@@ -85,24 +62,32 @@ var page = function () {
         fetchData();
     }, []);
     if (data) {
-        return (react_1.default.createElement("div", null,
-            react_1.default.createElement("table", { className: "pure-table" },
-                react_1.default.createElement("thead", null,
-                    react_1.default.createElement("tr", null,
-                        react_1.default.createElement("th", null, "key"),
-                        react_1.default.createElement("th", null, "value"))),
-                react_1.default.createElement("tbody", null, data.hh5p &&
-                    Object.entries(data.hh5p).map(function (_a) {
-                        var key = _a[0], value = _a[1];
-                        return (react_1.default.createElement("tr", { key: key },
-                            react_1.default.createElement("td", null, key),
-                            react_1.default.createElement("td", null,
-                                react_1.default.createElement(exports.UpdateEntry, { loading: loading, value: value, onUpdate: function (newValue) {
-                                        onUpdate(key, newValue);
-                                    } }))));
-                    })))));
+        return (<div>
+                <table className="pure-table">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.hh5p &&
+                Object.entries(data.hh5p).map(function (_a) {
+                    var key = _a[0], value = _a[1];
+                    return (<tr key={key}>
+                                    <td>{key}</td>
+                                    <td>
+                                        <exports.UpdateEntry loading={loading} value={value} onUpdate={function (newValue) {
+                            onUpdate(key, newValue);
+                        }}/>
+                                    </td>
+                                </tr>);
+                })}
+                    </tbody>
+                </table>
+            </div>);
     }
-    return react_1.default.createElement("p", null, "loading");
+    return <p>loading</p>;
 };
 exports.page = page;
 exports.default = exports.page;

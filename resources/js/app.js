@@ -10,31 +10,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
+var react_1 = require("react");
 var h5p_react_1 = require("@escolalms/h5p-react");
 function App() {
     console.log("hi");
@@ -62,14 +39,17 @@ function App() {
             window.removeEventListener("hashchange", onHashChange);
         };
     }, []);
-    return (react_1.default.createElement("div", { className: "App" },
-        react_1.default.createElement(h5p_react_1.EditorContextProvider, { url: "http://api.wellms.localhost/api/admin/hh5p", defaultLang: "pl" },
-            state.state === "editor" ? (react_1.default.createElement(h5p_react_1.Editor, { id: state.id, onSubmit: function (response) {
-                    setState(function (prevState) { return (__assign(__assign({}, prevState), { id: typeof response.id === "string"
-                            ? parseInt(response.id)
-                            : response.id })); });
-                } })) : (react_1.default.createElement(react_1.default.Fragment, null)),
-            state.state === "player" && state.id ? (react_1.default.createElement(h5p_react_1.Player, { id: state.id, onXAPI: function (data) { return console.log(data); } })) : (react_1.default.createElement(react_1.default.Fragment, null)))));
+    return (<div className="App">
+            <h5p_react_1.EditorContextProvider url="http://api.wellms.localhost/api/admin/hh5p" defaultLang="pl">
+                {state.state === "editor" ? (<h5p_react_1.Editor id={state.id} onSubmit={function (response) {
+                setState(function (prevState) { return (__assign(__assign({}, prevState), { id: typeof response.id === "string"
+                        ? parseInt(response.id)
+                        : response.id })); });
+            }}/>) : (<react_1.default.Fragment />)}
+
+                {state.state === "player" && state.id ? (<h5p_react_1.Player id={state.id} onXAPI={function (data) { return console.log(data); }}/>) : (<react_1.default.Fragment />)}
+            </h5p_react_1.EditorContextProvider>
+        </div>);
 }
 exports.default = App;
 //# sourceMappingURL=app.js.map
