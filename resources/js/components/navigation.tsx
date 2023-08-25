@@ -12,16 +12,17 @@ const LANGS = {
         login: "Anmelden",
         logout: "Abmelden",
         uploadNew: "Importieren",
+        welcome: "Autorentool"
     },
     en: {
         logout: "Logout",
-        welcome: "h5p-laravel Autorentool",
         login: "Login",
         contentList: "Content List",
         createNewElement: "Create New Element",
         libraries: "Libraries",
         config: "Config",
         uploadNew: "Upload New",
+        welcome: "Authoring tool",
     },
     pl: {
         login: "Zaloguj",
@@ -34,6 +35,8 @@ const LANGS = {
 };
 
 const getLangItem = (key: string) => {
+    console.log('[mg]___:)___ localStorage.getItem("lang") : ');
+    console.log(localStorage.getItem("lang") );
     const lang = localStorage.getItem("lang") || "en";
     return LANGS[lang][key] || LANGS["en"][key];
 };
