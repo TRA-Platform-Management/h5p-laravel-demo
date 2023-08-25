@@ -142,10 +142,18 @@ export const editorSettings = (id?: string | number, lang: string = "de") => {
 
 export const contentSettings = (
     uuid?: string | number,
-    lang: string = localStorage.getItem("lang") || "en"
+    lang: string = "en"
 ) => {
+    console.log('[mg]___:)___ lang: ');
+    console.log(lang);
+
     let url: string = `${API_URL}/hh5p/content/${uuid}`;
     url = lang ? `${url}?lang=${lang}` : url;
+
+    console.log('[mg]___:)___ 2 lang: ');
+    console.log(lang);
+    console.log('[mg]___:)___ url: ');
+    console.log(url);
     return fetch(url, {
         headers: {
             Accept: "application/json",
