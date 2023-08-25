@@ -142,7 +142,7 @@ export const editorSettings = (id?: string | number, lang: string = "de") => {
 
 export const contentSettings = (
     uuid?: string | number,
-    lang: string = "en"
+    lang: string = localStorage.getItem("lang") || "en"
 ) => {
     let url: string = `${API_URL}/hh5p/content/${uuid}`;
     url = lang ? `${url}?lang=${lang}` : url;
