@@ -12,7 +12,7 @@ const LANGS = {
         login: "Anmelden",
         logout: "Abmelden",
         uploadNew: "Importieren",
-        welcome: "Autorentool"
+        welcome: "Autorentool",
     },
     en: {
         logout: "Logout",
