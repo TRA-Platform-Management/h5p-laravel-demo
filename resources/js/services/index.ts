@@ -142,7 +142,7 @@ export const editorSettings = (id?: string | number, lang: string = "de") => {
 
 export const contentSettings = (
     uuid?: string | number,
-    lang: string = "de"
+    lang: string = "en"
 ) => {
     console.log('[mg]___:)___ lang: ');
     console.log(lang);
