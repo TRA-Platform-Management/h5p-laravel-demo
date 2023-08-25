@@ -5,6 +5,7 @@ import { userMe } from "../services";
 
 const LANGS = {
     de: {
+        welcome: "Autorentool",
         config: "Konfiguration",
         contentList: "Content Liste",
         createNewElement: "Neuen Content erstellen",
@@ -12,17 +13,16 @@ const LANGS = {
         login: "Anmelden",
         logout: "Abmelden",
         uploadNew: "Importieren",
-        welcome: "Autorentool",
     },
     en: {
         logout: "Logout",
+        welcome: "Authoring tool",
         login: "Login",
         contentList: "Content List",
         createNewElement: "Create New Element",
         libraries: "Libraries",
         config: "Config",
         uploadNew: "Upload New",
-        welcome: "Authoring tool",
     },
     pl: {
         login: "Zaloguj",
