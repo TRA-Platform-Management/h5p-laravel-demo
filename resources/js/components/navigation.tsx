@@ -35,8 +35,6 @@ const LANGS = {
 };
 
 const getLangItem = (key: string) => {
-    console.log('[mg]___:)___ localStorage.getItem("lang") : ');
-    console.log(localStorage.getItem("lang") );
     const lang = localStorage.getItem("lang") || "en";
     return LANGS[lang][key] || LANGS["en"][key];
 };
