@@ -125,7 +125,7 @@ export const login = (email: string, password: string) =>
         body: JSON.stringify({ email, password, remember_me: 1 }),
     });
 
-export const editorSettings = (id?: string | number, lang: string = "en") => {
+export const editorSettings = (id?: string | number, lang: string = "de") => {
     let url: string = id
         ? `${API_URL}/admin/hh5p/editor/${id}`
         : `${API_URL}/admin/hh5p/editor`;
@@ -140,17 +140,12 @@ export const editorSettings = (id?: string | number, lang: string = "en") => {
     });
 };
 
-export const contentSettings = (uuid?: string | number, lang: string = "de") => {
-    console.log('[mg]___:)___ lang: ');
-    console.log(lang);
-
+export const contentSettings = (
+    uuid?: string | number,
+    lang: string = "en"
+) => {
     let url: string = `${API_URL}/hh5p/content/${uuid}`;
     url = lang ? `${url}?lang=${lang}` : url;
-
-    console.log('[mg]___:)___ 2 lang: ');
-    console.log(lang);
-    console.log('[mg]___:)___ url: ');
-    console.log(url);
     return fetch(url, {
         headers: {
             Accept: "application/json",
