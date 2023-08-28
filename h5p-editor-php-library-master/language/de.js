@@ -172,6 +172,7 @@ H5PEditor.language.core = {
   getHelp: 'Hilfe',
   untitled: 'Unbenannt: :libraryTitle',
   title: 'Titel',
+  extraTitle: 'Titel',
   metadata: 'Metadaten',
   addTitle: 'Titel hinzufügen',
   usedForSearchingReportsAndCopyrightInformation: 'Wird für die Suche, Berichte und Urheberrechtsinformationen benutzt',
