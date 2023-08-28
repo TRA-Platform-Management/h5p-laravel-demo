@@ -126,6 +126,7 @@ export const login = (email: string, password: string) =>
     });
 
 export const editorSettings = (id?: string | number, lang: string = "en") => {
+    console.log('[mg]___:)___ start resources/js/services/index.ts editorSettings lang : '); console.log(lang);
     let url: string = id
         ? `${API_URL}/admin/hh5p/editor/${id}`
         : `${API_URL}/admin/hh5p/editor`;
@@ -144,6 +145,7 @@ export const contentSettings = (
     uuid?: string | number,
     lang: string = "en"
 ) => {
+    console.log('[mg]___:)___ start resources/js/services/index.ts contentSettings lang : '); console.log(lang);
     let url: string = `${API_URL}/hh5p/content/${uuid}`;
     url = lang ? `${url}?lang=${lang}` : url;
     return fetch(url, {

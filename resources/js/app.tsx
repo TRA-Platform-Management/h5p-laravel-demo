@@ -1,8 +1,9 @@
+// @ts-ignore
 import React, { useState, useEffect } from "react";
 import { Editor, Player, EditorContextProvider } from "@escolalms/h5p-react";
 
 function App() {
-    console.log("hi");
+    console.log('[mg]___:)___ start resources/js/app.tsx: ');
     const [state, setState] = useState<{
         state: string;
         id?: number;
