@@ -94,8 +94,8 @@ export const page = () => {
                 <table className="pure-table">
                     <thead>
                         <tr>
-                            <th>key</th>
-                            <th>value</th>
+                            <th>localStorage.getItem(key)</th>
+                            <th>localStorage.getItem(value)</th>
                         </tr>
                     </thead>
                     <tbody>
