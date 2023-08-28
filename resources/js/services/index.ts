@@ -125,7 +125,7 @@ export const login = (email: string, password: string) =>
         body: JSON.stringify({ email, password, remember_me: 1 }),
     });
 
-export const editorSettings = (id?: string | number, lang: string = "en") => {
+export const editorSettings = (id?: string | number, lang: string = "de") => {
     let url: string = id
         ? `${API_URL}/admin/hh5p/editor/${id}`
         : `${API_URL}/admin/hh5p/editor`;
@@ -142,7 +142,7 @@ export const editorSettings = (id?: string | number, lang: string = "en") => {
 
 export const contentSettings = (
     uuid?: string | number,
-    lang: string = "en"
+    lang: string = "de"
 ) => {
     let url: string = `${API_URL}/hh5p/content/${uuid}`;
     url = lang ? `${url}?lang=${lang}` : url;
