@@ -3,6 +3,8 @@
  * Construct a form from library semantics.
  */
 ns.Form = function (library, startLanguages, defaultLanguage) {
+  console.log('[mg]___:)___ start h5peditor-form.js startLanguages: ');console.log(startLanguages);
+  console.log('[mg]___:)___ start h5peditor-form.js defaultLanguage: ');console.log(defaultLanguage);
   var self = this;
 
   this.params = {};
