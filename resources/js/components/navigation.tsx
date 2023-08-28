@@ -171,7 +171,6 @@ export const Navigation = () => {
                             onChange={(e) => changeLang(e.target.value)}
                         >
                             <option value="en">en</option>
-                            <option value="pl">pl</option>
                             <option value="de">de</option>
                         </select>
                     </form>

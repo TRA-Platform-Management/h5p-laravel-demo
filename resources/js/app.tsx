@@ -9,7 +9,7 @@ function App() {
         lang?: string;
     }>({
         state: "init",
-        lang: "pl",
+        lang: "de",
     });
 
     useEffect(() => {
@@ -37,7 +37,7 @@ function App() {
         <div className="App">
             <EditorContextProvider
                 url="http://api.wellms.localhost/api/admin/hh5p"
-                defaultLang="pl"
+                defaultLang="de"
             >
                 {state.state === "editor" ? (
                     <Editor
