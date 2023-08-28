@@ -974,7 +974,7 @@ ns.getDescriptionId = function (id) {
  */
 ns.createLabel = function (field, content, inputId) {
   // New items can be added next to the label within the flex-wrapper
-  var html = '<label class="h5peditor-label-wrapper h5peditor"';
+  var html = '<label class="h5peditor-label-wrapper Testh5peditor"';
 
   if (inputId !== undefined) {
     html += ' for="' + inputId + '"';
