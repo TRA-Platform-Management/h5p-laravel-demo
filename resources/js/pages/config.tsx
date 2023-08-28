@@ -110,7 +110,7 @@ export const page = () => {
                     <thead>
                         <tr>
                             <th>{getLangItem("key")}</th>
-                            <th>l{getLangItem("value")}</th>
+                            <th>{getLangItem("value")}</th>
                         </tr>
                     </thead>
                     <tbody>
