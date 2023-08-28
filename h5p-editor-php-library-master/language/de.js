@@ -175,7 +175,7 @@ H5PEditor.language.core = {
   extraTitle: 'Titel',
   metadata: 'Metadaten',
   addTitle: 'Titel hinzufügen',
-  usedForSearchingReportsAndCopyrightInformation: 'Wird für die Suche, Berichte und Urheberrechtsinformationen benutzt',
+  usedForSearchingReportsAndCopyrightInformation: 'Wird für die Suche, Berichte und Urheberrechtsinformationen benutzt - UEBERSETZUNG',
   metadataSharingAndLicensingInfo: 'Metadaten (Lizenzinformationen)',
   fillInTheFieldsBelow: 'Fülle die folgenden Felder aus',
   saveMetadata: 'Metadaten speichern',
