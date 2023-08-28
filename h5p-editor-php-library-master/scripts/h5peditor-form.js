@@ -72,6 +72,9 @@ ns.Form = function (library, startLanguages, defaultLanguage) {
   const $notice = this.$form.find('.h5peditor-language-notice');
   const loadedLibs = [];
   const languages = {};
+  console.log('[mg]___:)___ ns.contentLanguage: ');console.log(ns.contentLanguage);
+  console.log('[mg]___:)___ defaultLanguage: ');console.log(defaultLanguage);
+
   ns.defaultLanguage = ns.contentLanguage;
   if (defaultLanguage) {
     ns.defaultLanguage = defaultLanguage;
