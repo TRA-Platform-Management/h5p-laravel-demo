@@ -1222,6 +1222,8 @@ ns.libraryFromString = function (library) {
  * @returns {String} Widget name
  */
 ns.getWidgetName = function (field) {
+  console.log('[mg]___:)___ getWidgetName: ');console.log(getWidgetName);
+
   return (field.widget === undefined ? field.type : field.widget);
 };
 
