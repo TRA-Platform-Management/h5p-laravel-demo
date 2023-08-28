@@ -157,7 +157,7 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
     const setupA11yTitleField = function () {
       const titleField = H5PEditor.findField('title', self);
       const a11yTitleField = H5PEditor.findField('a11yTitle', self);
-      const label = titleField.$item[0].querySelector('label.h5peditor-label-wrapper');
+      const label = titleField.$item[0].querySelector('label.h5peditor-label-wrapper h5peditor-metadata-test-label');
       const toggleA11yTitleButton = document.createElement('button');
       const a11yTitleText = document.createElement('span');
       a11yTitleText.classList.add('h5p-a11y-title-text');
@@ -263,7 +263,7 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
      * @param {$} $element
      */
     self.appendButtonTo = function ($item) {
-      $button.appendTo($item.children('.h5peditor-label-wrapper').wrap('<div class="h5p-editor-flex-wrapper"/>').parent());
+      $button.appendTo($item.children('.h5peditor-label-wrapper h5peditor-metadata-test-button--label').wrap('<div class="h5p-editor-flex-wrapper"/>').parent());
     };
 
     /**
