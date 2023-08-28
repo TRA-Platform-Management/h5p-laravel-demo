@@ -44,7 +44,7 @@ ns.Form = function (library, startLanguages, defaultLanguage) {
 
   // Add title expand/collapse button
   self.$commonButton = ns.$('<div/>', {
-    'class': 'h5peditor-label',
+    'class': 'h5peditor-label TestForm',
     'aria-expanded': 'false',
     title: ns.t('core', 'expandCollapse'),
     role: 'button',
@@ -351,7 +351,7 @@ ns.Form.prototype.setSubContentDefaultLanguage = function (params, lang) {
   const self = this;
 
   if (Array.isArray(params)) {
-    for (let i; i < params.length; i++) { 
+    for (let i; i < params.length; i++) {
       params[i] = self.setSubContentDefaultLanguage(params[i], lang);
     }
   }
