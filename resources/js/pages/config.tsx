@@ -1,6 +1,21 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { fetchConfig, Configs, ConfigEntry, updateConfig } from "../services";
 
+const LANGS = {
+    de: {
+        key: "Option",
+        value: "Wert",
+    },
+    en: {
+        key: "Option",
+        value: "Value",
+    },
+};
+
+const getLangItem = (key: string) => {
+    const lang = localStorage.getItem("lang") || "en";
+    return LANGS[lang][key] || LANGS["en"][key];
+};
 export const UpdateEntry: React.FC<{
     value: ConfigEntry;
     onUpdate: (newValue: ConfigEntry["value"]) => void;
@@ -94,8 +109,8 @@ export const page = () => {
                 <table className="pure-table">
                     <thead>
                         <tr>
-                            <th>localStorage.getItem(key)</th>
-                            <th>localStorage.getItem(value)</th>
+                            <th>{getLangItem("key")}</th>
+                            <th>l{getLangItem("value")}</th>
                         </tr>
                     </thead>
                     <tbody>
