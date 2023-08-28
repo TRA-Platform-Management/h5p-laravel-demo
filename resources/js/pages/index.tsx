@@ -95,8 +95,8 @@ export const page = () => {
                             <tr key={h5p.id}>
                                 <td>{h5p.id}</td>
                                 <td>{h5p.uuid}</td>
-                                <td>{h5p.title}</td>
-                                <td>{h5p.library.title}</td>
+                                <td>{getLangItem(h5p.title)}</td>
+                                <td>{getLangItem(h5p.library.title)}</td>
                                 <td>
                                     <Link
                                         className="pure-button"
