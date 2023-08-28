@@ -24,7 +24,7 @@ const LANGS = {
         library: "Library",
         page: "Page",
         preview: "Preview",
-        title: "Title",
+        title: "Title-UEBERSETZUNG",
     },
 };
 
