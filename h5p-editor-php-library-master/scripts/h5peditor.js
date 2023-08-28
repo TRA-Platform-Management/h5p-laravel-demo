@@ -68,7 +68,7 @@ ns.renderableCommonFields = {};
   ns.loadJs = (src, done) => {
     if (H5P.jsLoaded(src)) {
       // Already loaded
-      done(); 
+      done();
       return;
     }
 
@@ -92,7 +92,7 @@ ns.renderableCommonFields = {};
     };
     script.onerror = function (err) {
       loading[src].forEach(cb => cb(err));
-      delete loading[src];      
+      delete loading[src];
     };
     script.src = src;
     document.head.appendChild(script);
@@ -974,7 +974,7 @@ ns.getDescriptionId = function (id) {
  */
 ns.createLabel = function (field, content, inputId) {
   // New items can be added next to the label within the flex-wrapper
-  var html = '<label class="h5peditor-label-wrapper"';
+  var html = '<label class="h5peditor-label-wrapper h5peditor"';
 
   if (inputId !== undefined) {
     html += ' for="' + inputId + '"';

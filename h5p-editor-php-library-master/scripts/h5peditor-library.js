@@ -104,7 +104,7 @@ ns.Library.prototype.appendTo = function ($wrapper) {
 
   if (this.field.label !== 0 && this.field.label !== undefined) {
     html += '<div class="h5p-editor-flex-wrapper">' +
-        '<label class="h5peditor-label-wrapper" for="' + id + '">' +
+        '<label class="h5peditor-label-wrapper h5peditorlibrary" for="' + id + '">' +
           '<span class="h5peditor-label' +
             (this.field.optional ? '' : ' h5peditor-required') + '">' +
               this.field.label +
