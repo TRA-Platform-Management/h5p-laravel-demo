@@ -375,7 +375,7 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
    */
   const getExtraTitleFieldSemantics = function () {
     const extraTitle = JSON.parse(JSON.stringify(findField('title'))); // Clone
-    extraTitle.name = 'extraTitle'; // Change name to avoid conflicts
+    extraTitle.name = t('extraTitle'); // Change name to avoid conflicts
     extraTitle.description = t('usedForSearchingReportsAndCopyrightInformation');
     delete extraTitle.placeholder;
     return extraTitle;
