@@ -374,7 +374,11 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
    * @return {Object}
    */
   const getExtraTitleFieldSemantics = function () {
-    const extraTitle = JSON.parse(JSON.stringify(findField('title'))); // Clone
+
+      console.log('[mg]___:)___ getExtraTitleFieldSemantics start ');
+      console.log('[mg]___:)___ t(extraTitle');      console.log(t('extraTitle'));
+
+      const extraTitle = JSON.parse(JSON.stringify(findField('title'))); // Clone
     extraTitle.name = t('extraTitle'); // Change name to avoid conflicts
     extraTitle.description = t('usedForSearchingReportsAndCopyrightInformation');
     delete extraTitle.placeholder;
@@ -386,7 +390,15 @@ H5PEditor.MetadataForm = (function (EventDispatcher, $, metadataSemantics) {
    * @return {string}
    */
   const t = function (key) {
-    return H5PEditor.t('core', key);
+
+
+      console.log('[mg]___:)___ h5p-multi-choice: ');
+      console.log(H5PEditor.t('h5p-multi-choice', key));
+
+      console.log('[mg]___:)___ multi-choice: ');
+      console.log(H5PEditor.t('multi-choice', key));
+
+      return H5PEditor.t('core', key);
   };
 
   /**

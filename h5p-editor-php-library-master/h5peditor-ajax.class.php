@@ -154,8 +154,8 @@ class H5PEditorAjax {
       case H5PEditorEndpoints::TRANSLATIONS:
         $language = func_get_arg(1);
 
-          die('[mg]___:)___  translations for ' . $language);
-          
+          //die('[mg]___:)___  translations for ' . $language);
+
         H5PCore::ajaxSuccess($this->editor->getTranslations($_POST['libraries'], $language));
         break;
 
