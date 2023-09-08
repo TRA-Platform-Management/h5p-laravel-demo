@@ -49,6 +49,10 @@
       else {
         $upload.hide();
         if (h5peditor === undefined) {
+            console.log('[mg]___:)___ h5p-editor-php-library-master/scripts/h5peditor-init.js new ns.Editor library, $params.val() and $editor[0]: ');
+            console.log(library);
+            console.log($params.val());
+            console.log($editor[0]);
           h5peditor = new ns.Editor(library, $params.val(), $editor[0]);
         }
         $create.show();
