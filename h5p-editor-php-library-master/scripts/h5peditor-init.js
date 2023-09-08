@@ -1,12 +1,20 @@
 (function ($, ns) {
   H5PEditor.init = function ($form, $type, $upload, $create, $editor, $library, $params, $maxScore, $title, cancelSubmitCallback) {
     H5PEditor.$ = H5P.jQuery;
+      console.log('[mg]___:)___ H5PIntegration.editor.libraryUrl: ');
+      console.log(H5PIntegration.editor.libraryUrl);
     H5PEditor.basePath = H5PIntegration.editor.libraryUrl;
     H5PEditor.fileIcon = H5PIntegration.editor.fileIcon;
     H5PEditor.ajaxPath = H5PIntegration.editor.ajaxPath;
+      console.log('[mg]___:)___ H5PIntegration.editor.ajaxPath: ');
+      console.log(H5PIntegration.editor.ajaxPath);
     H5PEditor.filesPath = H5PIntegration.editor.filesPath;
+      console.log('[mg]___:)___ H5PIntegration.editor.filesPath: ');
+      console.log(H5PIntegration.editor.filesPath);
     H5PEditor.apiVersion = H5PIntegration.editor.apiVersion;
     H5PEditor.contentLanguage = H5PIntegration.editor.language;
+      console.log('[mg]___:)___ H5PIntegration.editor.language: ');
+      console.log(H5PIntegration.editor.language);
 
     // Semantics describing what copyright information can be stored for media.
     H5PEditor.copyrightSemantics = H5PIntegration.editor.copyrightSemantics;
