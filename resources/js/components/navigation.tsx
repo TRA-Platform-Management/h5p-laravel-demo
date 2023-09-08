@@ -36,7 +36,7 @@ const LANGS = {
 
 const getLangItem = (key: string) => {
     const lang = localStorage.getItem("lang") || "de";
-    return LANGS[lang][key] || LANGS["en"][key];
+    return LANGS[lang][key] || LANGS["de"][key];
 };
 
 const navlinkStyle = ({ isActive }) =>

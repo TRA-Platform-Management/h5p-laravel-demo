@@ -377,7 +377,7 @@ H5P.init = function (target) {
     const contentId = $iframe.data('content-id');
     const contentData = H5PIntegration.contents['cid-' + contentId];
     const contentLanguage = contentData && contentData.metadata && contentData.metadata.defaultLanguage
-      ? contentData.metadata.defaultLanguage : 'en';
+      ? contentData.metadata.defaultLanguage : 'de';
 
     const writeDocument = function () {
       iframe.contentDocument.open();
@@ -1040,7 +1040,7 @@ H5P.t = function (key, vars, ns) {
  * @param {H5P.jQuery} $element
  *   Which DOM element the dialog should be inserted after.
  * @param {H5P.jQuery} $returnElement
- *   Which DOM element the focus should be moved to on close   
+ *   Which DOM element the focus should be moved to on close
  */
 H5P.Dialog = function (name, title, content, $element, $returnElement) {
   /** @alias H5P.Dialog# */
@@ -1894,7 +1894,7 @@ H5P.MediaCopyright = function (copyright, labels, order, extraFields) {
  * @param {string} source
  * @param {number} width
  * @param {number} height
- * @param {string} alt 
+ * @param {string} alt
  *  alternative text for the thumbnail
  */
 H5P.Thumbnail = function (source, width, height, alt) {
@@ -2687,7 +2687,7 @@ H5P.createTitle = function (rawTitle, maxLength) {
         }
         return path.substr(0, prefix.length) === prefix ? path : prefix + path;
       }
-      
+
       return path; // Will automatically be looked for in tmp folder
     });
 

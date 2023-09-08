@@ -459,8 +459,8 @@ class H5peditor {
 
         // If translation was not found, and this is not the English one, try to load
         // the English translation
-        if ($translation === NULL && $languageCode !== 'en') {
-          $translation = $this->getLibraryLanguage($library['machineName'], $library['majorVersion'], $library['minorVersion'], 'en');
+        if ($translation === NULL && $languageCode !== 'de') {
+          $translation = $this->getLibraryLanguage($library['machineName'], $library['majorVersion'], $library['minorVersion'], 'de');
         }
 
         if ($translation !== NULL) {

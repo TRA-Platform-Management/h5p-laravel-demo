@@ -646,7 +646,7 @@ interface H5PFrameworkInterface {
    *
    * @return JsonSerializable Json string
    */
-  public function getContentHubMetadataCache($lang = 'en');
+  public function getContentHubMetadataCache($lang = 'de');
 
   /**
    * Get time of last content hub metadata check
@@ -655,7 +655,7 @@ interface H5PFrameworkInterface {
    *
    * @return string|null Time in RFC7231 format
    */
-  public function getContentHubMetadataChecked($lang = 'en');
+  public function getContentHubMetadataChecked($lang = 'de');
 
   /**
    * Set time of last content hub metadata check
@@ -665,7 +665,7 @@ interface H5PFrameworkInterface {
    *
    * @return bool True if successful
    */
-  public function setContentHubMetadataChecked($time, $lang = 'en');
+  public function setContentHubMetadataChecked($time, $lang = 'de');
 }
 
 /**
@@ -2138,7 +2138,7 @@ class H5PCore {
    * @param string $language code. Defaults to english.
    * @param boolean $export enabled?
    */
-  public function __construct(H5PFrameworkInterface $H5PFramework, $path, $url, $language = 'en', $export = FALSE) {
+  public function __construct(H5PFrameworkInterface $H5PFramework, $path, $url, $language = 'de', $export = FALSE) {
     $this->h5pF = $H5PFramework;
 
     $this->fs = ($path instanceof \H5PFileStorage ? $path : new \H5PDefaultStorage($path));
@@ -3396,7 +3396,7 @@ class H5PCore {
   /**
    * Update content hub metadata cache
    */
-  public function updateContentHubMetadataCache($lang = 'en') {
+  public function updateContentHubMetadataCache($lang = 'de') {
     $url          = H5PHubEndpoints::createURL(H5PHubEndpoints::METADATA);
     $lastModified = $this->h5pF->getContentHubMetadataChecked($lang);
 
@@ -3434,7 +3434,7 @@ class H5PCore {
    *
    * @return JsonSerializable|string
    */
-  public function getUpdatedContentHubMetadataCache($lang = 'en') {
+  public function getUpdatedContentHubMetadataCache($lang = 'de') {
     $lastUpdate = $this->h5pF->getContentHubMetadataChecked($lang);
     if (!$lastUpdate) {
       return $this->updateContentHubMetadataCache($lang);
