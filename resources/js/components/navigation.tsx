@@ -35,7 +35,7 @@ const LANGS = {
 };
 
 const getLangItem = (key: string) => {
-    const lang = localStorage.getItem("lang") || "en";
+    const lang = localStorage.getItem("lang") || "de";
     return LANGS[lang][key] || LANGS["en"][key];
 };
 
@@ -50,7 +50,7 @@ export const Navigation = () => {
         window.localStorage.getItem("token") !== null
     );
     const [lang, setLang] = useState(
-        window.localStorage.getItem("lang") || "en"
+        window.localStorage.getItem("lang") || "de"
     );
 
     const logout = () => {

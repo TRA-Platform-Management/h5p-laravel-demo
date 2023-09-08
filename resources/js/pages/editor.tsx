@@ -23,7 +23,7 @@ export const page = () => {
             setLoading(true);
             editorSettings(
                 id === "new" ? undefined : id,
-                localStorage.getItem("lang") || "en"
+                localStorage.getItem("lang") || "de"
             )
                 .then((res) => res.json())
                 .then((data) => {

@@ -15,7 +15,7 @@ export const page = () => {
     useEffect(() => {
         if (uuid) {
             setLoading(true);
-            contentSettings(uuid, localStorage.getItem("lang") || "en")
+            contentSettings(uuid, localStorage.getItem("lang") || "de")
                 .then((res) => res.json())
                 .then((data) => {
                     setSettings(data.data);
