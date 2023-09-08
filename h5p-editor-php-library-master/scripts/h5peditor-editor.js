@@ -612,6 +612,12 @@ ns.language = {};
  *   missing.
  */
 ns.t = function (library, key, vars) {
+    console.log('[mg]___:)___ h5p-editor-php-library-master/scripts/h5peditor-editor.js Translate text strings library: ');
+    console.log(library);
+    console.log('[mg]___:)___ h5p-editor-php-library-master/scripts/h5peditor-editor.js Translate text strings key: ');
+    console.log(key);
+    console.log('[mg]___:)___ h5p-editor-php-library-master/scripts/h5peditor-editor.js Translate text strings vars: ');
+    console.log(vars);
   if (ns.language[library] === undefined) {
     return 'Missing translations for library ' + library;
   }
