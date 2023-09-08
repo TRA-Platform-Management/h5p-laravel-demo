@@ -15,6 +15,10 @@ export const page = () => {
     const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
+
+        console.log('[mg]___:)___ resources/js/pages/editor.tsx export const page useEffect localStorage.getItem("lang"): ');
+        console.log(localStorage.getItem("lang"));
+
         if (id) {
             setLoading(true);
             editorSettings(
@@ -45,7 +49,8 @@ export const page = () => {
         return <p>loading...</p>;
     }
 
-    console.log('[mg]___:)___ resources/js/pages/editor.tsx settings: ');console.log(settings);
+    console.log('' +
+        '[mg]___:)___ resources/js/pages/editor.tsx settings: ');console.log(settings);
 
 
     return (
